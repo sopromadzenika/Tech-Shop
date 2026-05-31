@@ -1,0 +1,11 @@
+.dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5vh;
+    width: 100%;
+    background-color: #000000;  
+}
+.dark a{
+    color: rgb(77, 209, 77);
+}

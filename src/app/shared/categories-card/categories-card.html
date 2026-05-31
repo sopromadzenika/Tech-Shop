@@ -1,0 +1,12 @@
+<a routerLink="/shop" [queryParams]="{categoryId: categories.id}">
+    <div class="categories">
+    <div class="forImg">
+        <img [src]="categories.imageUrl" alt="">
+    </div>
+    <div class="forInfo">
+        <h3>{{categories.name}}</h3>
+        <h5>{{categories.productCount}} Products</h5>
+    </div>
+</div>
+</a>
+

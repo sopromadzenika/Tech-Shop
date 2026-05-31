@@ -1,0 +1,22 @@
+<section>
+  <form #myForm="ngForm" (ngSubmit)="register()">
+    <input type="text" placeholder="First Name" name="firstName" [(ngModel)]="signInData.firstName">
+    <input type="text" placeholder="Last Name" name="lastName" [(ngModel)]="signInData.lastName">
+    <input type="email" placeholder="Email" name="email" [(ngModel)]="signInData.email" #emailInput="ngModel" required email>
+    @if(emailInput.invalid && emailInput.touched) {
+        <span>Pls Enter the Email</span>
+    }
+    <input type="password" placeholder="Password" name="password" [(ngModel)]="signInData.password" minlength="6" pattern="(?=.*[A-Z])(?=.*[@$!%*?&]).+" #password="ngModel" required> 
+    @if(password.hasError('minlength') && password.touched){
+      <span>Password is too Short</span>
+    }
+    @if(password.hasError('required') && password.touched){
+      <span>Pld Enter the Password</span>
+    }
+    @if(password.hasError('pattern') && password.touched){
+      <span>Password must contain at least one uppercase letter and one symbol</span>
+    }
+
+    <button>Create Account</button>
+  </form>
+</section>

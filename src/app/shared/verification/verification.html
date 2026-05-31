@@ -1,0 +1,21 @@
+<section>
+  <form #myForm="ngForm" (ngSubmit)="onVerify()">
+    <input 
+      type="text" 
+      placeholder="Verification Code" 
+      name="code" 
+      [(ngModel)]="code" 
+      #codeInput="ngModel"
+      required
+    >
+    @if(codeInput.invalid && codeInput.touched) {
+      <span>Please enter the verification code</span>
+    }
+
+    <button>Verify Email</button>
+
+    <p>Didn't receive a code? 
+      <a (click)="resendCode()">Resend</a>
+    </p>
+  </form>
+</section>

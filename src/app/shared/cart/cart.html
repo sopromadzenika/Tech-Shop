@@ -1,0 +1,44 @@
+<section class="section">
+    <div class="heading">
+    <h1>Shopping Cart</h1>
+   </div>
+<div class="both">
+   <div class="cart">
+    @if(productCart()){     
+   @for(item of productCart().items; track item.id){
+     <div class="fill">
+        <img [src]="item.product.imageUrl"/>
+        <h3>{{ item.product.name }}</h3>
+        <p>price: {{ item.price }}</p>
+        <p>quantity: {{ item.quantity }}</p>
+        <button (click)="delate(item.id)" class="trash"><img src="assets/icon/trash.svg" alt="" class="cart-wrapper"></button>
+    </div>
+    } 
+    }
+    </div> 
+    <div class="left">
+      
+    @if(productCart() && productCart().items.length > 0){
+     <h1>Total:</h1>
+     <p>Total Items: {{ totalItems() }}</p>
+     <p>Total Price: ${{ totalPrice() }}</p>
+     <button (click)="openCreditCard()">Buy</button>
+    }
+    @if(showCreditCard()){
+    <div class="checkout" (click)="closeCreditCard()">
+    <div class="check" (click)="$event.stopPropagation()">
+      <h2>Payment Details</h2>
+      <input type="text" placeholder="Card Number"/>
+      <input type="text" placeholder="Card Holder Name"/>
+      <input type="text" placeholder="Expiry Date (MM/YY)"/>
+      <input type="text" placeholder="CVV"/>
+      <button (click)="checkOut()">Check Out</button>
+      <button class="cancel" (click)="closeCreditCard()">Cancel</button>
+      </div>
+    </div>
+   }
+    </div>
+    
+   
+   </div>
+</section>

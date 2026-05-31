@@ -1,0 +1,24 @@
+.categories{
+    height: 100px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.forImg{
+    display: flex;
+}
+.forImg img{
+    width: 70px;
+    height: 60px;
+}
+.forInfo{
+    display: flex;
+    flex-direction: column;
+}
+.forInfo h3{
+    width: 60%;
+}

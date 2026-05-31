@@ -1,0 +1,32 @@
+<section>
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <input type="email" name="email" required [(ngModel)]="signInData.email" #emailInput="ngModel" placeholder="Email" email>
+    @if(emailInput.invalid && emailInput.touched) {
+        <span>Pls Enter the Email</span>
+    }
+    <input type="password" name="password" required [(ngModel)]="signInData.password" #passwordInput ="ngModel" minlength="6" placeholder="Password"> 
+    @if(passwordInput.hasError('required') && passwordInput.touched) {
+        <span>Pls Enter the password</span>
+    }
+    @if(passwordInput.hasError('minlength') && passwordInput.touched) {
+        <span>Password is too short</span>
+    }
+
+    <div class="sechalf">
+    <div>
+      <input type="checkbox" id="checkbox">
+      <label for="checkbox">Remember me</label>
+    </div>
+
+     <a href="#">Forgot Password?</a>
+    </div>
+
+    <button>Sign In</button>
+    <div class="line">
+        <p>Don't have an account? <a routerLink="/register">Create one now</a></p>
+    </div>
+    </form>
+    
+</section>
+

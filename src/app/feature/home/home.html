@@ -1,0 +1,28 @@
+<section class="bell">
+  <div class="head">
+    <div class="head1">
+      <h1>Elevating Your Digital Life</h1>
+      <p>From cutting-edge tech to everyday essentials — discover premium deals. Enjoy complementary premium delivery on selected orders.</p>
+    </div>
+    <div class="head2">
+      <a routerLink="/shop">Shop Now</a>
+    </div>
+  </div>
+</section>
+
+<section class="bell1">
+    <div class="changePage">
+      <div>
+        <h1>Shop by Category</h1>
+        <a routerLink="/shop">View All ❯</a>
+      </div>
+
+      <div class="everything">
+        @for(item of categoriesList().slice(0, 4); track item.id){
+          <app-categories-card [categories]="item"></app-categories-card>
+        }
+      </div>    
+
+    
+    </div>
+</section>

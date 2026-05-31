@@ -1,0 +1,27 @@
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3.5rem;
+    width: 100px;
+    min-height: 5%;
+    border-radius: 10px;
+    
+}
+.logout button{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    min-height: 3rem;
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    color: white;
+    transition-duration: 0.5s;
+    background-color: hsl(141, 62%, 48%);
+}
+.logout button:hover{
+    background-color: #E8F8EE;
+    color: #217c44;
+}

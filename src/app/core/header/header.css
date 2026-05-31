@@ -1,0 +1,160 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    font-family: "Poppins", sans-serif;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 120px;
+    height: 100%;
+}
+.row a{
+    font-size: 1.5rem;
+    color: black;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3.5rem;
+    width: 280px;
+    gap: 15px;
+}
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    min-height: 3rem;
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+nav a.active{
+    background-color: #E8F8EE;
+    color: #217c44;
+}
+span{
+    color: #005741;
+}
+.Categories{
+    display: flex;
+}
+.Categories select{
+    border: none;
+}
+.TEXT{
+    width: 15%;
+}
+.TEXT input{
+    border-radius: 10px;
+    min-height: 40px;
+    width: 80%;
+    color: #1DB954;
+}
+
+.SIGN {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3.5rem;
+    width: 100px;
+    min-height: 5%;
+    border-radius: 10px;
+    background-color: hsl(141, 62%, 48%);
+
+}
+.SIGN a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    min-height: 3rem;
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    color: white;
+    transition-duration: 0.5s;
+}
+.SIGN a.active{
+    background-color: #E8F8EE;
+    color: #217c44;
+}
+.cartPage{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    background-color: #2FC664;
+    height: 48px;
+}
+.cartPage a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.burgerBtn{
+  width: 100px;
+  min-height: 40px;
+  z-index: 100;
+}
+.burgerBtn button{
+    background-color: white;
+    border: none;
+    z-index: 100;
+}
+.burgerBtn img{
+    width: 60px;
+    background-color: white;
+    border: none;
+    z-index: 100;
+}
+.burgerBtn{
+    display: none;
+}
+@media (max-width: 960px) {
+  header {
+    position: relative;
+    z-index: 1000;
+  }
+
+  .burgerBtn {
+    display: block;
+    transition-duration: 0.5s;
+    z-index: 1001;
+    position: relative;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    height: 80vh;
+  }
+
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 999;
+  }
+}

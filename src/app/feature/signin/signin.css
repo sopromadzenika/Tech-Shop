@@ -1,0 +1,105 @@
+section {
+    width: 100%;
+    height: 84.89vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 400px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    background: white;
+}
+
+form input {
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: 1.5px solid #e0e0e0;
+    padding: 0 16px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+form input:focus {
+    border-color: #1DC85A;
+    background-color: #f0fdf4;
+}
+
+form span {
+    color: red;
+    font-size: 13px;
+    align-self: flex-start;
+    margin-top: -8px;
+}
+
+.sechalf {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.sechalf a {
+    color: #1DC85A;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sechalf a:hover {
+    text-decoration: underline;
+}
+
+form button {
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #1DC85A;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+form button:hover {
+    transform: translateY(-4px);
+    background-color: #17a84a;
+    box-shadow: 0 4px 12px rgba(29,200,90,0.3);
+}
+
+.line {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.line a {
+    color: #1DC85A;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.line a:hover {
+    text-decoration: underline;
+}
+
+.sechalf input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #1DC85A;
+}
+

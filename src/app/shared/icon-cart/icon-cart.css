@@ -1,0 +1,16 @@
+.cart-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #1DC85A;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-wrapper:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px #1dc95959;
+}

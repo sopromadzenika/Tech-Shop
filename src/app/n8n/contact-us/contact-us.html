@@ -1,0 +1,18 @@
+<section>
+    <h1>Contact Us</h1>
+    <form (ngSubmit)="message()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required [(ngModel)]="contact.firstName" placeholder="firstName">
+
+         <label for="name">Last Name:</label>
+        <input type="text" id="name" name="name" required [(ngModel)]="contact.lastName" placeholder="lastName">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required [(ngModel)]="contact.email" placeholder="Email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required [(ngModel)]="contact.message" placeholder="Your message here..."></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>

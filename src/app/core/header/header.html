@@ -1,0 +1,36 @@
+<header>
+    <div class="row">
+        <a routerLink="" class="logo"><app-logo></app-logo></a>
+        
+        <a routerLink="">Tech<span>Shop</span></a>
+    </div>
+    
+    <nav [class.active]="burgerBtn">
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()">Home</a>
+        <a routerLink="/shop" routerLinkActive="active" (click)="toggleMenu()" >Shop</a>
+        <a routerLink="/aboutus" routerLinkActive="active"  (click)="toggleMenu()">AboutUs</a>
+        <a routerLink="/contact" routerLinkActive="active"  (click)="toggleMenu()">Contact</a>
+    </nav>
+    <div class="cartPage">
+       <a routerLink="/cart"><app-icon-cart></app-icon-cart></a>
+    </div>
+
+    <div class="SIGN">
+        @if(islogedOut){
+            <app-log-out></app-log-out>
+        }@else{
+            <a routerLink="/signin" routerLinkActive="active">Sign in</a>
+        }     
+    </div>
+
+    <div class="burgerBtn">
+        <button (click)="toggleMenu()">
+            @if(burgerBtn === false){
+                <img src="assets/img/bars-solid-full (1).svg" alt="">
+            }@else{
+                <img src="assets/img/xmark-solid-full.svg" alt="">
+            }
+        </button>
+    </div>
+    
+</header>

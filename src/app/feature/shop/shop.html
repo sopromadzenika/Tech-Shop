@@ -1,0 +1,72 @@
+<section class="everything">
+  <div class="categoriesFilter">
+    <h2>Categories</h2>
+    @for(category of categoriesList(); track category.id){
+      <button (click)="pageCategories(category.id)">{{category.name}}</button>
+    }
+    <button (click)="allProduct()">All Product</button>
+
+    <div class="filter">
+      <h3>Filter</h3>
+      <div class="price">
+        <div class="minPrice">
+          <label for="minPrice">Min Price</label>
+          <input type="number" [(ngModel)]="minPrice" placeholder="0" id="minPrice">
+        </div>
+        <div class="minPrice">
+          <label for="maxPrice">Max Price</label>
+          <input type="number" [(ngModel)]="maxPrice" placeholder="9999" id="maxPrice">
+        </div>
+      </div>
+      <div class="minPrice rate">
+        <label for="minRating">Min Rating</label>
+        <input type="number" [(ngModel)]="minRating" placeholder="0" id="minRating" min="0" max="5">
+      </div>
+      <div class="minPrice">
+        <label for="brand">Brand</label>
+        <input type="text" [(ngModel)]="brand" placeholder="Brand" id="brand">
+      </div>
+
+      <button (click)="filterFunction()">Apply Filter</button>
+      <button (click)="resetFilter()">Reset Filter</button>
+
+    </div>
+  </div>
+
+  <section class="product">
+    <div class="search">
+      <input type="search"
+      placeholder="Search"
+      [ngModel]="liveSearchquery()"
+      (ngModelChange)="livesearch($event)"
+      >
+    </div>
+    @if(isLoading()) {
+      <div class="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p class="loading-text">Products are loading<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+        </div>
+    </div>
+    } @else {
+      <div class="wrap">
+        @for(item of productShop(); track item.id){
+          <app-products [product]="item"></app-products>
+        }
+    </div>
+
+    <div class="btns">
+      <button (click)="preview()">back</button>
+      @if(pagePage() < 4){
+        <button (click)="nextPage()">next</button>
+      }
+        </div>
+    }
+    
+        
+        
+  </section>
+  
+</section>
+
+ 

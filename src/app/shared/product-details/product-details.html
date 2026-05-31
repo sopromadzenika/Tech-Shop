@@ -1,0 +1,34 @@
+@if (productData()) {
+  <section>
+    <div class="devLepOne">
+        <div class="devImgOne">
+            <img [src]="productData().imageUrl" alt="">
+        </div>
+    </div>
+<div class="secHULF">
+    <div class="devLepTwo">
+        <h3>{{productData().category.name}}</h3>
+        <h2>{{productData().name}}</h2>
+        <h3>Rating {{productData().rating}}</h3>
+        <h2>{{productData().price | currency}}</h2>
+        <h3>Stock {{productData().stock}}</h3>
+        <h3>{{productData().description}}</h3>
+        <p></p>
+    </div>
+
+    <div class="quantity">
+     <p>Quantity:</p>
+    <div class="counter">
+      <button (click)="decrease()" [disabled]="productData().stock === 0">-</button>
+      <span>{{quantity}}</span>
+      <button (click)="increase()" [disabled]="productData().stock === 0">+</button>
+     </div>
+    </div>
+
+    <div>
+
+          <button [disabled]="productData().stock === 0">ADD to Cart</button>
+    </div>
+</div>
+</section>
+}

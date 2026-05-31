@@ -1,0 +1,10 @@
+<div class="product">
+    <img [src]="product.imageUrl" alt="">
+    <div class="list">
+        <a [routerLink]="['/shops', product.id]"><h3>{{product.name}}</h3>
+        <h3>{{product.price | currency}}</h3>
+        <h3>Stock: {{product.stock}}</h3>
+    </a>   
+    </div>
+        <button (click)="addToCart()" [disabled]="product.stock === 0">Add to Cart</button>
+</div>
